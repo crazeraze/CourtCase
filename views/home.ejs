@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CourtCase - Home</title>
+  <link rel="stylesheet" href="/styles/home.css" />
+  <link rel="stylesheet" href="/styles/header&footer.css" />
+</head>
+<body>
+
+  <%- include("./partials/header.ejs") %>
+
+  <!-- Hero Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="/images/DSC_0002-835x329.png" alt="Slide 1">
+      <div class="slide-text">
+        <h2>Find Legal Help Easily</h2>
+        <p>Search for advocates, cases, and legal templates all in one place.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="/images/DSC_0027-784x310.png" alt="Slide 2">
+      <div class="slide-text">
+        <h2>Trusted Legal Resources</h2>
+        <p>Verified information from expert lawyers and professionals.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="/images/slide3.png" alt="Slide 3">
+      <div class="slide-text">
+        <h2>Fast & Reliable</h2>
+        <p>Get results with just a few clicks – legal help made simple.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Advocate Directory</h3>
+        <p>Search for the best advocates in your city.</p>
+        <a href="#" class="btn">Search Here</a>
+      </div>
+      <div class="feature">
+        <h3>Court Case Directory</h3>
+        <p>Find cases by name, type, or number.</p>
+        <a href="#" class="btn">Search Here</a>
+      </div>
+      <div class="feature">
+        <h3>Print Court Stationery</h3>
+        <p>Download free court templates in Hindi & English.</p>
+        <a href="#" class="btn">Print Template</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include("partials/footer.ejs") %>
+  <script src="/js/slideshow.js"></script>
+</body>
+</html>
