@@ -2,14 +2,135 @@
 <html>
 <head>
   <title>Register</title>
+  <link rel="stylesheet" href="/styles/register.css">
+
 </head>
+
 <body>
   <h2>Register</h2>
   <form method="POST" action="/register">
+    <input type="radio" name="modeselect" value="Lawyer" required id="lawyerRadio" />Lawyer
+    <input type="radio" name="modeselect" value="other" required  id="otherRadio"/>Others<br />
+  
+
+    <form method="POST" action="/register">
+      <!-- Radio buttons -->
+      <label>
+     
+    
+     
+    
+      <!-- Enrollment field, hidden by default -->
+      <div id="enrollmentDiv" style="display: none;">
+        <input type="text" name="enrollment" placeholder="Enrollment Number" id="enrollmentInput" />
+      </div>
+    
+      
+    <!-- JavaScript -->
+    <script>
+      // Select DOM elements
+      const lawyerRadio = document.getElementById("lawyerRadio");
+      const otherRadio = document.getElementById("otherRadio");
+      const enrollmentDiv = document.getElementById("enrollmentDiv");
+      const enrollmentInput = document.getElementById("enrollmentInput");
+    
+      // Add event listeners
+      lawyerRadio.addEventListener("change", () => {
+        if (lawyerRadio.checked) {
+          enrollmentDiv.style.display = "block";
+          enrollmentInput.required = true;
+        }
+      });
+    
+      otherRadio.addEventListener("change", () => {
+        if (otherRadio.checked) {
+          enrollmentDiv.style.display = "none";
+          enrollmentInput.required = false;
+        }
+      });
+    </script>
+    
+    
+
     <input type="text" name="username" placeholder="Username" required /><br />
-    <input type="email" name="email" placeholder="Email" required /><br />
-    <input type="password" name="password" placeholder="Password" required /><br />
+    <input type="email" name="email" placeholder="Email" required /><br />   
+
+    <input type="tel" id="phone" name="phone" placeholder="Contact Number"  maxlength="10"><br />
+    <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob"><br />
+      <label>Gender</label>
+    <select name="gender" id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>    
+       
+    </select>
+    <div class="select-something">
+      Country
+      <select name="state" id="countySel" size="1">
+<option  value="" selected="selected">Please select Country</option>
+</select>
+  </div>
+  <!--State -->
+  <div class="select-something">
+      State <select name="countrya" id="stateSel" size="1">
+<option value="" selected="selected">Please select state</option>
+</select>
+  </div>
+  <!--State -->
+  <div class="select-something">
+      District <select name="district" id="districtSel" size="1">
+<option value="" selected="selected">Please select district</option>
+</select>
+  </div>
+
+  
+  
+ 
+  <input type="password" id="firstcheck" name="password" placeholder="Password"  required /><br />
+
+
+  
+    <input type="checkbox"   onclick="myFunction1()">Show Password
+    <span class="checkmark"></span>
+  
+
+
+ 
+  <input type="password" id="secondcheck" name="repassword" placeholder="Re Enter Your Password" required /><br />
+
+
+ 
+    <input type="checkbox"   onclick="myFunction2()">Show Password
+    <span class="checkmark"></span>
+  
+
+  <script>
+    function myFunction1() {
+  var x = document.getElementById("firstcheck");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+  function myFunction2() {
+  var x = document.getElementById("secondcheck");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+  
+
+  </script>
     <button type="submit">Register</button>
   </form>
+  
 </body>
+<script src="/js/Country+State+District-City-Data.js"></script>
 </html>
+
+
