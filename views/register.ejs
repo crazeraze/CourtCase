@@ -53,6 +53,7 @@
     
 
     <input type="text" name="username" placeholder="Username" required /><br />
+    <input type="text" name="name" placeholder="Full name" required /><br />
     <input type="email" name="email" placeholder="Email" required /><br />   
 
     <input type="tel" id="phone" name="phone" placeholder="Contact Number"  maxlength="10"><br />
@@ -82,9 +83,9 @@
       District <select name="district" id="districtSel" size="1">
 <option value="" selected="selected">Please select district</option>
 </select>
+<textarea type="textarea" rows="3" name="address" placeholder="Address" required ></textarea><br />
   </div>
-
-  
+ 
   
  
   <input type="password" id="firstcheck" name="password" placeholder="Password"  required /><br />
@@ -123,10 +124,21 @@
   }
 }
 
+function validatepassword() {
+  var password = document.getElementById("firstcheck").value;
+  var confirmPassword = document.getElementById("secondcheck").value;
+  if (password != confirmPassword) {
+    alert("Passwords do not match.");
+    return false;
+  }
+  else{
+    return true;
+  }
+};
   
 
   </script>
-    <button type="submit">Register</button>
+    <button type="submit" onclick="validatepassword()">Register</button>
   </form>
   
 </body>

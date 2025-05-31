@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard with Expandable Main Screen</title>
+  <link rel="stylesheet" href="styles/header&footer.css">
+  <link rel="stylesheet" href="styles/userdash.css">
+  <link rel="stylesheet" href="styles/dashheasderfooter.css">
+ 
+  
+</head>
+
+<body>
+  <%- include("partials/dashheader.ejs") %>
+<%-  %>
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-content">
+        
+        <h2 class="menu-title">MENU</h2>
+        <ul>
+          <li class="icons">
+            <img src="icons/home-icon.svg" class="icon">
+            <span class="menu-text">Dashboard</span>
+          </li>
+          <li class="icons">
+            <img src="icons/search-icon.svg" class="icon">
+            <span class="menu-text">Search Cases</span>
+          </li>
+          <li class="icons">
+            <img src="icons/law-book-icon.svg" class="icon">
+            <span class="menu-text">Act & Rules</span>
+          </li>
+          <li class="icons">
+            <img src="icons/lawyer-icon.svg" class="icon">
+            <span class="menu-text">Lawyer</span>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  
+    <div class="content" id="content">
+      
+      <h1>Welcome to the Dashboard</h1>
+      <p>This is your main content area.</p>
+    </div>
+  </div>
+  
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('minimized');
+    }
+  </script>
+</body>
+</html>

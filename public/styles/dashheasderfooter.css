@@ -1,0 +1,72 @@
+.dashboard-header {
+  background-color: #002952;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+  position: relative;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.toggle-btn {
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.center-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-icon {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.calendar-icon:hover {
+  transform: scale(1.1);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
